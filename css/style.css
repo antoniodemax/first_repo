@@ -1,0 +1,16 @@
+h1{
+    color: brown;
+    text-align:center ;font-style: italic;
+}
+img{height: 200px;
+width: 200px;border-radius: 500px;
+}
+
+#header{
+    color: brown;
+}
+
+
+.wrapper{
+    color: blacks;
+}
