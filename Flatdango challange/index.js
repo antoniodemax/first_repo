@@ -97,12 +97,12 @@ document.addEventListener('DOMContentLoaded', () => {
         errorMessage.classList.add('ul', 'message', 'negative');
         document.body.appendChild(errorMessage);
 
-    //     // set timeout to remove the error message 5 seconds.
-    //     setTimeout(() => errorMessage.remove(), 5000);
-    // }
+        // set timeout to remove the error message 5 seconds.
+        setTimeout(() => errorMessage.remove(), 5000);
+    }
 
-    // call the fetchMoviesFromDB function to fetch movie data.
-    fetchMoviesFromDB();
+    // // call the fetchMoviesFromDB function to fetch movie data.
+    // fetchMoviesFromDB();
 
 
 });
