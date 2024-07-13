@@ -28,15 +28,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // function createMovieListItem(movie) {//creates a list item for a movie.
-    //      const li = document.createElement('li');
+    function createMovieListItem(movie) {//creates a list item for a movie.
+         const li = document.createElement('li');
 
-    //      li.textContent = movie.title;
-    //      li.dataset.movieId = movie.Id;
-    //      li.classList.add('item', 'film');
-    //      li.addEventListener('click', () => updateMovieDetails(movie.Id));
-    //      return li;
-    //     }
+         li.textContent = movie.title;
+         li.dataset.movieId = movie.Id;
+         li.classList.add('item', 'film');
+         li.addEventListener('click', () => updateMovieDetails(movie.Id));
+         return li;
+        }
+
+    function updateMovieDetails(movieId) {//updates movie details when a movie is clicked.
+        const movie = movieData.find(m => m.id === movieId)
+        if (!movie) return;
+
+
+    //     //available number of tickets for the movie.
+    //     const availableTickets = movie.capacity - movie.tickets_sold;
+    //     const buyTicketBtn = document.getElementById('buy-ticket');
+    //     buyTicketBtn.textContent = availableTickets > 0 ? 'Buy Ticket': 'Sold Out';
+    //     buyTicketBtn.classList.toggle('disabled', availableTickets=0);//returns true if the value entered is true otherwise false.
+
+    //     buyTicketBtn.onclick = () => { //adds the event listener to the 'buy ticket' button for the ticket purchase.
+    //         if(availableTickets > 0) {
+    //             buyTicket(movie);
+    //         }
+    //     };
+
+    //     displayMoviesDetails(movie);
+    // }
+
+
         
 
 
