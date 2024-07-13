@@ -90,19 +90,19 @@ document.addEventListener('DOMContentLoaded', () => {
         updateTicketCount(movie.id);
     } 
     
-    // function showErrorMessage(message) {
-    //     // display error message on the webpage.
-    //     const errorMessage = document.createElement('div');
-    //     errorMessage.textContent = message;
-    //     errorMessage.classList.add('ul', 'message', 'negative');
-    //     document.body.appendChild(errorMessage);
+    function showErrorMessage(message) {
+        // display error message on the webpage.
+        const errorMessage = document.createElement('div');
+        errorMessage.textContent = message;
+        errorMessage.classList.add('ul', 'message', 'negative');
+        document.body.appendChild(errorMessage);
 
     //     // set timeout to remove the error message 5 seconds.
     //     setTimeout(() => errorMessage.remove(), 5000);
     // }
 
-    // // call the fetchMoviesFromDB function to fetch movie data.
-    // fetchMoviesFromDB();
+    // call the fetchMoviesFromDB function to fetch movie data.
+    fetchMoviesFromDB();
 
 
 });
