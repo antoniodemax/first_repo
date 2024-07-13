@@ -59,20 +59,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    //   function buyTicket(movie) {
-    //     movie.tickets_sold++;
+      function buyTicket(movie) {
+        movie.tickets_sold++;
 
-    //     // updates and implements tickets count display on the webpage.
-    //     updateTicketCount(movie.id);
-    //     updateMovieDetails(movie.id);
-    //   }  
+        // updates and implements tickets count display on the webpage.
+        updateTicketCount(movie.id);
+        updateMovieDetails(movie.id);
+      }  
 
     
-    function updateTicketCount (movieId) {
-        const movie = movieData.find(m => m.id === movieId);// updates the displayed number of tickets available for a movie.
+    // function updateTicketCount (movieId) {
+    //     const movie = movieData.find(m => m.id === movieId);// updates the displayed number of tickets available for a movie.
 
-        const availableTickets = movie.capacity - movie.tickets_sold;// calculates 
-        }  
+        // const availableTickets = movie.capacity - movie.tickets_sold;// calculates  number of tickets available.
+
+        // document.getElementById('ticket-num').textContent = availableTickets;// update ticket count on the webpage.
+        // }  
 
 
 })
