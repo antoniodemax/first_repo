@@ -28,7 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    
+    // function createMovieListItem(movie) {//creates a list item for a movie.
+    //      const li = document.createElement('li');
+
+    //      li.textContent = movie.title;
+    //      li.dataset.movieId = movie.Id;
+    //      li.classList.add('item', 'film');
+    //      li.addEventListener('click', () => updateMovieDetails(movie.Id));
+    //      return li;
+    //     }
+        
 
 
 })
