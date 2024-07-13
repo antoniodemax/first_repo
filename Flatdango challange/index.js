@@ -68,13 +68,41 @@ document.addEventListener('DOMContentLoaded', () => {
       }  
 
     
-    // function updateTicketCount (movieId) {
-    //     const movie = movieData.find(m => m.id === movieId);// updates the displayed number of tickets available for a movie.
+    function updateTicketCount (movieId) {
+         const movie = movieData.find(m => m.id === movieId);// updates the displayed number of tickets available for a movie.
 
-        // const availableTickets = movie.capacity - movie.tickets_sold;// calculates  number of tickets available.
+        const availableTickets = movie.capacity - movie.tickets_sold;// calculates  number of tickets available.
 
-        // document.getElementById('ticket-num').textContent = availableTickets;// update ticket count on the webpage.
-        // }  
+        document.getElementById('ticket-num').textContent = availableTickets;// update ticket count on the webpage.
+
+        } 
+        
+    function displayMovieDetails(movie) {
+
+        //display details about a movie in the details section on the webpage.
+        document.getElementById('title').textContent = movie.title;
+        document.getElementById('runtime').textContent = '${movie.runtime} minutes';
+        document.getElementById('film-info').textContent = movie.description;
+        document.getElementById('showtime').textContent = movie.showtime;
+        document.getElementById('poster').src = movie.poster;
+        document.getElementById('poster').alt = `Poster for ${movie.title}`;
+
+        updateTicketCount(movie.id);
+    } 
+    
+    // function showErrorMessage(message) {
+    //     // display error message on the webpage.
+    //     const errorMessage = document.createElement('div');
+    //     errorMessage.textContent = message;
+    //     errorMessage.classList.add('ul', 'message', 'negative');
+    //     document.body.appendChild(errorMessage);
+
+    //     // set timeout to remove the error message 5 seconds.
+    //     setTimeout(() => errorMessage.remove(), 5000);
+    // }
+
+    // // call the fetchMoviesFromDB function to fetch movie data.
+    // fetchMoviesFromDB();
 
 
-})
+});
