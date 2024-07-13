@@ -101,8 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => errorMessage.remove(), 5000);
     }
 
-    // // call the fetchMoviesFromDB function to fetch movie data.
-    // fetchMoviesFromDB();
+    // call the fetchMoviesFromDB function to fetch movie data.
+    fetchMoviesFromDB();
 
 
 });
