@@ -43,23 +43,36 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!movie) return;
 
 
-    //     //available number of tickets for the movie.
-    //     const availableTickets = movie.capacity - movie.tickets_sold;
-    //     const buyTicketBtn = document.getElementById('buy-ticket');
-    //     buyTicketBtn.textContent = availableTickets > 0 ? 'Buy Ticket': 'Sold Out';
-    //     buyTicketBtn.classList.toggle('disabled', availableTickets=0);//returns true if the value entered is true otherwise false.
+        //available number of tickets for the movie.
+        const availableTickets = movie.capacity - movie.tickets_sold;
+        const buyTicketBtn = document.getElementById('buy-ticket');
+        buyTicketBtn.textContent = availableTickets > 0 ? 'Buy Ticket': 'Sold Out';
+        buyTicketBtn.classList.toggle('disabled', availableTickets=0);//returns true if the value entered is true otherwise false.
 
-    //     buyTicketBtn.onclick = () => { //adds the event listener to the 'buy ticket' button for the ticket purchase.
-    //         if(availableTickets > 0) {
-    //             buyTicket(movie);
-    //         }
-    //     };
+        buyTicketBtn.onclick = () => { //adds the event listener to the 'buy ticket' button for the ticket purchase.
+            if(availableTickets > 0) {
+                buyTicket(movie);
+            }
+        };
 
-    //     displayMoviesDetails(movie);
-    // }
+        displayMoviesDetails(movie);
+    }
 
 
-        
+    //   function buyTicket(movie) {
+    //     movie.tickets_sold++;
+
+    //     // updates and implements tickets count display on the webpage.
+    //     updateTicketCount(movie.id);
+    //     updateMovieDetails(movie.id);
+    //   }  
+
+    
+    function updateTicketCount (movieId) {
+        const movie = movieData.find(m => m.id === movieId);// updates the displayed number of tickets available for a movie.
+
+        const availableTickets = movie.capacity - movie.tickets_sold;// calculates 
+        }  
 
 
 })
