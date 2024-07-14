@@ -1,16 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+BE+WAL:wght@100..400&family=Playwrite+CU:wght@100..400&display=swap');
 
-.heading {
-    font-family: "Arsenal SC", sans-serif;
+body {
+    background-image: url(https://plus.unsplash.com/premium_photo-1676894579005-6771014f2db3?q=80&w=1624&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .heading {
+    background-color: #333333;
+    margin-bottom: 20px;
+    padding: 5px 0px 5px 15px;
+  }
+
+  h2 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: xx-large;
+
+    
+    
+  }
+  
+  .title {
+    background-color: #333333;
+    padding: 5px;
+    color:black;
+    text-align: center;
+  }
+  
+  #runtime {
+    background-color: #333333;
+    color: #3e8fde;
+    padding: 0px 0px 5px 5px;
+  }
+  
+  .content {
+    color: #3e8fde;
+  }
+  
+  #subtitle {
+    color:black;
+    margin-left: 55px;
+  }
+  
+  #showing {
+    margin-left: 20px;
+  }
+  
+  #films li::before {
+    content: "";
+  }
+  
+  .film {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 2px; 
+    
+    
+ }
+  
+ 
+ #main-content{
+    display: flex;
+    justify-content: center;
+ }
+  img {
+    max-width: 25vw;
+    display: flex;
+    justify-content: center;
     text-align: center;
 
-}
-
-body{
+  }
   
-  background-image: url(https://images.unsplash.com/photo-1564951434112-64d74cc2a2d7?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: "Ga Maamli", sans-serif;
+  #film-info {
+    padding-bottom: 15px;
+  }
+  #movie-details{
+      margin-left: 55px;
+      padding: 20px;
+      width: 70%;
+  }
 
-}
+  #poster {
+    width: 200px;
+    height: auto;
+  }

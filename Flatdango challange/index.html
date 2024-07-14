@@ -3,61 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Challange</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css">
+    <title>Flatdango Movies🎥🍿</title>
     <link rel="stylesheet" href="style.css">
-    <script src="js/transform.js"></script>
 </head>
 <body>
-    <div class="heading">
-        <div class="item">
-          <h2 class="ui header">
-            <div class="content">FLATDANGO🍿🎥</div>
-            <div class="sub header" id="subtitle">BUY MOVIE TICKETS</div>
-          </h2>
-        </div>
-      </div>
-      
-  
-      <div class="ui centered grid">
-        <div class="two wide column">
-          <div class="list-container">
-            <ul class="ui divided list" id="films">
-              <li class="film item">List of movies that will be aired live;</li>
-             
+    <div class="container">
+        <div class="sidebar">
+            <h2>FLATDANGO MOVIE THEATRE🎥🍿</h2>
+            <ul id="films">
+                
+                <template id="film-template">
+                    <li class="film item">
+                        <span class="film-title"></span>
+                    </li>
+                </template>
             </ul>
-          </div>
         </div>
-        <div class="four wide column">
-          <img
-            id="poster"
-            src="assets/placeholderImage.png"
-            alt="THE ONLY WAY TO LIVE"
-          />
-        </div>
-    
-        <div class="four wide column">
-          <div class="ui cards" id="showing">
-            <div class="card">
-              <div id="title" class="title">[MOVIE POSTER]</div>
-              <div id="runtime" class="meta">[runtime] minutes</div>
-              <div class="content">
-                <div class="description">
-                  <div id="film-info">INSERT THE MOVIE DESCRIPTION HERE</div>
-                  <span id="showtime" class="ui label">[SHOWTIME]</span>
-                  <span id="ticket-num">[X]</span>tickets remaining
-                </div>
-              </div>
-              <div class="extra content">
-                <button id="buy-ticket" class="ui orange button">
-                  Buy Ticket
-                </button>
-              </div>
+        <div class="main-content">
+            <div id="movie-details">
+                
+                <template id="movie-details-template">
+                    <div>
+                        <img class="movie-poster" src="" alt="Movie Poster">
+                        <h3 class="movie-title"></h3>
+                        <p class="movie-description"></p>
+                        <p>Runtime: <span class="movie-runtime"></span> minutes</p>
+                        <p>Showtime: <span class="movie-showtime"></span></p>
+                        <p>Available Tickets: <span class="available-tickets"></span></p>
+                        <button class="buy-ticket">Buy Ticket</button>
+                    </div>
+                </template>
             </div>
-          </div>
         </div>
-      </div>
-
+    </div>
 
     <script src="index.js"></script>
 </body>
