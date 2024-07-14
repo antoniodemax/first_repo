@@ -82,21 +82,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     };
 
-    // Function to display movie list in the sidebar
-    const displayMovieList = (movies) => {
-        movies.forEach(movie => {
-            const clone = document.importNode(filmTemplate.content, true);
-            const filmItem = clone.querySelector('.film.item');
-            filmItem.textContent = movie.title;
-            filmItem.dataset.movieId = movie.id;
+    // // Function to display movie list in the sidebar
+    // const displayMovieList = (movies) => {
+    //     movies.forEach(movie => {
+    //         const clone = document.importNode(filmTemplate.content, true);
+    //         const filmItem = clone.querySelector('.film.item');
+    //         filmItem.textContent = movie.title;
+    //         filmItem.dataset.movieId = movie.id;
 
-            filmItem.addEventListener('click', () => {
-                fetchMovieDetails(movie.id);
-            });
+    //         filmItem.addEventListener('click', () => {
+    //             fetchMovieDetails(movie.id);
+    //         });
 
-            filmsList.appendChild(clone);
-        });
-    };
+    //         filmsList.appendChild(clone);
+    //     });
+    // };
 
     // Initial function call to fetch all movies
     fetchAllMovies();
