@@ -15,7 +15,8 @@ body {
   h2 {
     text-align: center;
     font-weight: bolder;
-    font-size: xx-large;
+    font-size: medium;
+    
 
     
     
@@ -55,6 +56,8 @@ body {
     font-size: 20px;
     cursor: pointer;
     padding: 2px; 
+    font-family: "Dancing Script", cursive;
+    font-weight: 400;
     
     
  }
