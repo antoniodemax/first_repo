@@ -9,44 +9,44 @@ document.addEventListener('DOMContentLoaded', () => {
     const filmTemplate = document.getElementById('film-template');
     const movieDetailsTemplate = document.getElementById('movie-details-template');
 
-    // // Function to fetch movie details by ID
-    // const fetchMovieDetails = (id) => {
-    //     fetch(`${apiUrl}/films/${id}`)
-    //         .then(response => {
-    //             if (!response.ok) {
-    //                 throw new Error('Network response was not ok');
-    //             }
-    //             return response.json();
-    //         })
-    //         .then(movie => {
-    //             displayMovieDetails(movie);
-    //         })
-    //         .catch(error => {
-    //             console.error('Error fetching movie details:', error);
-    //         });
-    // };
+    // Function to fetch movie details by ID
+    const fetchMovieDetails = (id) => {
+        fetch(`${apiUrl}/films/${id}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(movie => {
+                displayMovieDetails(movie);
+            })
+            .catch(error => {
+                console.error('Error fetching movie details:', error);
+            });
+    };
 
-    // Function to display movie details on the page
-    const displayMovieDetails = (movie) => {
-        const moviePoster = movieDetailsTemplate.content.querySelector('.movie-poster');
-        const movieTitle = movieDetailsTemplate.content.querySelector('.movie-title');
-        const movieDescription = movieDetailsTemplate.content.querySelector('.movie-description');
-        const movieRuntime = movieDetailsTemplate.content.querySelector('.movie-runtime');
-        const movieShowtime = movieDetailsTemplate.content.querySelector('.movie-showtime');
-        const availableTickets = movieDetailsTemplate.content.querySelector('.available-tickets');
-        const buyTicketBtn = movieDetailsTemplate.content.querySelector('.buy-ticket');
+    // // Function to display movie details on the page
+    // const displayMovieDetails = (movie) => {
+    //     const moviePoster = movieDetailsTemplate.content.querySelector('.movie-poster');
+    //     const movieTitle = movieDetailsTemplate.content.querySelector('.movie-title');
+    //     const movieDescription = movieDetailsTemplate.content.querySelector('.movie-description');
+    //     const movieRuntime = movieDetailsTemplate.content.querySelector('.movie-runtime');
+    //     const movieShowtime = movieDetailsTemplate.content.querySelector('.movie-showtime');
+    //     const availableTickets = movieDetailsTemplate.content.querySelector('.available-tickets');
+    //     const buyTicketBtn = movieDetailsTemplate.content.querySelector('.buy-ticket');
 
-        moviePoster.src = movie.poster;
-        moviePoster.alt = `${movie.title} Poster`;
-        movieTitle.textContent = movie.title;
-        movieDescription.textContent = movie.description;
-        movieRuntime.textContent = movie.runtime;
-        movieShowtime.textContent = movie.showtime;
-        availableTickets.textContent = movie.capacity - movie.tickets_sold;
+    //     moviePoster.src = movie.poster;
+    //     moviePoster.alt = `${movie.title} Poster`;
+    //     movieTitle.textContent = movie.title;
+    //     movieDescription.textContent = movie.description;
+    //     movieRuntime.textContent = movie.runtime;
+    //     movieShowtime.textContent = movie.showtime;
+    //     availableTickets.textContent = movie.capacity - movie.tickets_sold;
 
-        buyTicketBtn.addEventListener('click', () => {
-            buyTicket(movie);
-        });
+    //     buyTicketBtn.addEventListener('click', () => {
+    //         buyTicket(movie);
+    //     });
 
         // Clear previous content and append new details
         movieDetails.innerHTML = '';
