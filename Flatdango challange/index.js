@@ -53,34 +53,34 @@ document.addEventListener('DOMContentLoaded', () => {
         movieDetails.appendChild(movieDetailsTemplate.content.cloneNode(true));
     };
 
-    // // Function to handle buying a ticket
-    // const buyTicket = (movie) => {
-    //     if (movie.tickets_sold < movie.capacity) {
-    //         movie.tickets_sold++;
-    //         displayMovieDetails(movie); // Update displayed tickets count
-    //         // Optional: Update backend via PATCH request (bonus deliverable)
-    //     } else {
-    //         alert('This showing is sold out!');
-    //     }
-    // };
-
-    // Function to fetch all movies and display in the menu
-    const fetchAllMovies = () => {
-        fetch(`${apiUrl}/films`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(movies => {
-                displayMovieList(movies);
-                fetchMovieDetails(movies[0].id); // Display details of the first movie by default
-            })
-            .catch(error => {
-                console.error('Error fetching movies:', error);
-            });
+    // Function to handle buying a ticket
+    const buyTicket = (movie) => {
+        if (movie.tickets_sold < movie.capacity) {
+            movie.tickets_sold++;
+            displayMovieDetails(movie); // Update displayed tickets count
+            // Optional: Update backend via PATCH request (bonus deliverable)
+        } else {
+            alert('This showing is sold out!');
+        }
     };
+
+    // // Function to fetch all movies and display in the menu
+    // const fetchAllMovies = () => {
+    //     fetch(`${apiUrl}/films`)
+    //         .then(response => {
+    //             if (!response.ok) {
+    //                 throw new Error('Network response was not ok');
+    //             }
+    //             return response.json();
+    //         })
+    //         .then(movies => {
+    //             displayMovieList(movies);
+    //             fetchMovieDetails(movies[0].id); // Display details of the first movie by default
+    //         })
+    //         .catch(error => {
+    //             console.error('Error fetching movies:', error);
+    //         });
+    // };
 
     // Function to display movie list in the sidebar
     const displayMovieList = (movies) => {
