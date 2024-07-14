@@ -1,30 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
     const apiUrl = 'http://localhost:3000'; 
 
-    // // Selecting DOM elements
-    // const filmsList = document.getElementById('films');
-    // const movieDetails = document.getElementById('movie-details');
+    // Selecting DOM elements
+    const filmsList = document.getElementById('films');
+    const movieDetails = document.getElementById('movie-details');
 
     // Template elements
     const filmTemplate = document.getElementById('film-template');
     const movieDetailsTemplate = document.getElementById('movie-details-template');
 
-    // Function to fetch movie details by ID
-    const fetchMovieDetails = (id) => {
-        fetch(`${apiUrl}/films/${id}`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(movie => {
-                displayMovieDetails(movie);
-            })
-            .catch(error => {
-                console.error('Error fetching movie details:', error);
-            });
-    };
+    // // Function to fetch movie details by ID
+    // const fetchMovieDetails = (id) => {
+    //     fetch(`${apiUrl}/films/${id}`)
+    //         .then(response => {
+    //             if (!response.ok) {
+    //                 throw new Error('Network response was not ok');
+    //             }
+    //             return response.json();
+    //         })
+    //         .then(movie => {
+    //             displayMovieDetails(movie);
+    //         })
+    //         .catch(error => {
+    //             console.error('Error fetching movie details:', error);
+    //         });
+    // };
 
     // Function to display movie details on the page
     const displayMovieDetails = (movie) => {
