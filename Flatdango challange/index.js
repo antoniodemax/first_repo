@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = 'http://localhost:3000'; 
+    const apiUrl = 'https://flatdango-backend.vercel.app/films'; 
 
     // Selecting DOM elements
     const filmsList = document.getElementById('films');
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to fetch movie details by ID
     const fetchMovieDetails = (id) => {
-        fetch(`${apiUrl}/films/${id}`)
+        fetch(`${apiUrl}/${id}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to fetch all movies and display in the menu
     const fetchAllMovies = () => {
-        fetch(`${apiUrl}/films`)
+        fetch(`${apiUrl}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -98,6 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Initial function call to fetch all movies
+    // Initial function call to fetch all movies that will be loaded
     fetchAllMovies();
 });

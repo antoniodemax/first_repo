@@ -63,9 +63,12 @@ body {
  }
   
  
- #main-content{
+ .main-content{
     display: flex;
     justify-content: center;
+    padding: 0 0 10px;
+    margin-bottom: 20px;
+    
  }
   img {
     max-width: 25vw;
